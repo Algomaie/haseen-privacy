@@ -1,301 +1,658 @@
 <!DOCTYPE html>
-<html lang="ar" id="html-root" dir="rtl">
+<html lang="ar" dir="rtl" id="htmlRoot">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>سياسة الخصوصية - حصين | Privacy Policy - Haseen</title>
-    <style>
-        :root {
-            --bg-color: #0f0f1a;
-            --surface-color: #1a1a2e;
-            --primary: #7c4dff;
-            --primary-light: #b388ff;
-            --text-main: #e0e0e0;
-            --text-muted: #888888;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="سياسة الخصوصية لتطبيق حصين - Haseen Privacy Policy"
+  />
+  <title>سياسة الخصوصية - حصين | Haseen Privacy Policy</title>
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <style>
+    :root {
+      --bg: #0b1020;
+      --surface: #121933;
+      --surface-2: #182142;
+      --primary: #7c4dff;
+      --primary-light: #b79cff;
+      --text: #e8ecf8;
+      --muted: #a8b0c7;
+      --border: rgba(255, 255, 255, 0.08);
+      --success: #8dd6a1;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      --radius: 18px;
+      --max-width: 920px;
+    }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background: var(--bg-color);
-            color: var(--text-main);
-            line-height: 1.6;
-            padding-bottom: 50px;
-        }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        /* Sticky Language Switcher */
-        .header {
-            position: sticky;
-            top: 0;
-            background: rgba(15, 15, 26, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            padding: 15px 20px;
-            display: flex;
-            justify-content: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            z-index: 100;
-        }
+    html {
+      scroll-behavior: smooth;
+    }
 
-        .lang-switch {
-            display: flex;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    body {
+      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(124, 77, 255, 0.18), transparent 25%),
+        linear-gradient(180deg, #0b1020 0%, #0a0f1d 100%);
+      color: var(--text);
+      line-height: 1.8;
+      min-height: 100vh;
+    }
 
-        .lang-btn {
-            background: transparent;
-            color: var(--text-muted);
-            border: none;
-            padding: 10px 24px;
-            font-size: 15px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            outline: none;
-        }
+    a {
+      color: var(--primary-light);
+      text-decoration: none;
+    }
 
-        .lang-btn.active {
-            background: var(--primary);
-            color: #ffffff;
-        }
+    a:hover {
+      text-decoration: underline;
+    }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 24px 20px;
-        }
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      background: rgba(11, 16, 32, 0.82);
+      border-bottom: 1px solid var(--border);
+    }
 
-        h1 {
-            color: var(--primary);
-            font-size: 1.6em;
-            margin-bottom: 2px;
-            line-height: 1.3;
-        }
+    .topbar-inner {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+    }
 
-        h2 {
-            color: var(--primary-light);
-            font-size: 1.25em;
-            margin: 32px 0 12px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 8px;
-        }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #fff;
+    }
 
-        p, li {
-            margin-bottom: 12px;
-            color: #cccccc;
-            font-size: 15px;
-        }
+    .brand-badge {
+      width: 38px;
+      height: 38px;
+      border-radius: 12px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--primary), #5f8cff);
+      box-shadow: var(--shadow);
+      font-size: 18px;
+    }
 
-        ul {
-            padding-inline-start: 24px;
-        }
+    .lang-switch {
+      display: inline-flex;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+    }
 
-        .date {
-            color: var(--text-muted);
-            font-size: 0.9em;
-            margin-bottom: 24px;
-            display: block;
-        }
+    .lang-btn {
+      border: none;
+      background: transparent;
+      color: var(--muted);
+      padding: 10px 18px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
 
-        a {
-            color: var(--primary-light);
-            text-decoration: none;
-        }
-        
-        a:hover {
-            text-decoration: underline;
-        }
+    .lang-btn.active {
+      background: var(--primary);
+      color: #fff;
+    }
 
-        /* Toggle logic */
-        #en-content {
-            display: none;
-        }
-    </style>
+    .wrapper {
+      width: min(100%, var(--max-width));
+      margin: 0 auto;
+      padding: 26px 18px 56px;
+    }
+
+    .hero {
+      background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01));
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 26px 22px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.6rem, 2vw, 2.1rem);
+      line-height: 1.35;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 0.98rem;
+    }
+
+    .updated {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 12px;
+      padding: 8px 12px;
+      background: rgba(124, 77, 255, 0.12);
+      border: 1px solid rgba(124, 77, 255, 0.26);
+      border-radius: 999px;
+      color: #e9ddff;
+      font-size: 0.92rem;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, var(--surface), var(--surface-2));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 22px 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      color: var(--primary-light);
+      font-size: 1.16rem;
+      margin-bottom: 14px;
+    }
+
+    .card p,
+    .card li {
+      color: #dbe2f3;
+      font-size: 0.97rem;
+    }
+
+    .card p + p {
+      margin-top: 10px;
+    }
+
+    .card ul {
+      padding-inline-start: 22px;
+      margin-top: 10px;
+    }
+
+    .card li + li {
+      margin-top: 8px;
+    }
+
+    .note,
+    .highlight {
+      margin-top: 14px;
+      padding: 14px 15px;
+      border-radius: 14px;
+      border: 1px solid var(--border);
+    }
+
+    .note {
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--muted);
+    }
+
+    .highlight {
+      background: rgba(141, 214, 161, 0.09);
+      border-color: rgba(141, 214, 161, 0.22);
+      color: #ddf7e5;
+    }
+
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-list li {
+      padding: 10px 0;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+
+    .contact-list li:last-child {
+      border-bottom: none;
+    }
+
+    .footer {
+      margin-top: 26px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      padding: 18px;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    @media (max-width: 640px) {
+      .topbar-inner {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .lang-switch {
+        width: 100%;
+      }
+
+      .lang-btn {
+        flex: 1;
+      }
+
+      .hero,
+      .card {
+        padding: 18px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="brand-badge">🛡️</div>
+        <span id="brandText">حصين - سياسة الخصوصية</span>
+      </div>
 
-    <div class="header">
-        <div class="lang-switch">
-            <button class="lang-btn active" id="btn-ar" onclick="switchLang('ar')">العربية</button>
-            <button class="lang-btn" id="btn-en" onclick="switchLang('en')">English</button>
-        </div>
+      <div class="lang-switch" aria-label="Language Switcher">
+        <button class="lang-btn active" id="btnAr" type="button">العربية</button>
+        <button class="lang-btn" id="btnEn" type="button">English</button>
+      </div>
     </div>
+  </header>
 
-    <div class="container">
-        <!-- Arabic Version -->
-        <div id="ar-content">
-            <h1>🛡️ سياسة الخصوصية — حصين</h1>
-            <span class="date">آخر تحديث: 19 أبريل 2026</span>
+  <main class="wrapper">
+    <!-- Arabic -->
+    <section id="contentAr">
+      <div class="hero">
+        <h1>سياسة الخصوصية — تطبيق حصين</h1>
+        <p>
+          نلتزم في تطبيق حصين بحماية خصوصيتك وتوضيح كيفية التعامل مع البيانات
+          بما يتوافق مع متطلبات الأمان ووضوح الاستخدام.
+        </p>
+        <div class="updated">📅 آخر تحديث: 19 أبريل 2026</div>
+      </div>
 
-            <h2>1. مقدمة</h2>
-            <p>مرحباً بك في تطبيق "حصين" (Haseen) لحماية التطبيقات. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية تعامل التطبيق مع بياناتك.</p>
+      <div class="content">
+        <article class="card">
+          <h2>1. المقدمة</h2>
+          <p>
+            مرحبًا بك في تطبيق <strong>حصين (Haseen)</strong> لقفل التطبيقات.
+            توضح هذه السياسة كيفية تعامل التطبيق مع المعلومات والبيانات المرتبطة
+            باستخدامه.
+          </p>
+          <p>
+            نحن نحترم خصوصيتك، ولذلك صُمم التطبيق ليعمل محليًا على جهازك قدر
+            الإمكان، دون الاعتماد على خوادم خارجية لتشغيل الوظائف الأساسية.
+          </p>
+        </article>
 
-            <h2>2. البيانات التي نجمعها</h2>
-            <p><strong>لا نجمع أي بيانات شخصية.</strong> تطبيق حصين يعمل بالكامل على جهازك المحلي (Offline) ولا يرسل أي بيانات إلى خوادم خارجية.</p>
-            <p>البيانات المخزنة محلياً على جهازك فقط:</p>
-            <ul>
-                <li><strong>رمز المرور (PIN):</strong> يتم تشفيره وتخزينه محلياً باستخدام تقنية AES-256 عبر مكتبة AndroidX Security. لا يتم إرساله لأي جهة.</li>
-                <li><strong>كود الاسترداد:</strong> يتم توليده عشوائياً وتخزينه مشفراً على جهازك فقط.</li>
-                <li><strong>قائمة التطبيقات المقفلة:</strong> تُحفظ محلياً لتمكين خدمة الحماية.</li>
-                <li><strong>سجل الأحداث الأمنية:</strong> يتم تسجيل محاولات الدخول الفاشلة محلياً فقط لتمكين المستخدم من مراجعتها.</li>
-                <li><strong>تفضيلات المستخدم:</strong> مثل اللغة ووضع التخفي، تُحفظ محلياً.</li>
-            </ul>
+        <article class="card">
+          <h2>2. البيانات ومعالجتها</h2>
+          <p>
+            <strong>لا يقوم تطبيق حصين بجمع أو إرسال أي بيانات شخصية إلى خوادم خارجية.</strong>
+          </p>
+          <p>جميع البيانات المتعلقة بوظيفة التطبيق تتم معالجتها وتخزينها محليًا على جهازك فقط.</p>
 
-            <h2>3. الأذونات المستخدمة</h2>
-            <p>يطلب التطبيق الأذونات التالية لأداء وظيفته الأساسية فقط:</p>
-            <ul>
-                <li><strong>إحصائيات الاستخدام (Usage Stats):</strong> لمعرفة التطبيق المفتوح حالياً وتفعيل شاشة القفل عند الحاجة. لا يتم تسجيل أو إرسال أي بيانات استخدام.</li>
-                <li><strong>الظهور فوق التطبيقات الأخرى (System Alert Window):</strong> إذن <u>أساسي جداً</u> يمكّن التطبيق من رسم واجهة القفل والتأمين فوق التطبيقات الأخرى لمنع الوصول إليها حتى يتم إدخال الرمز الصحيح.</li>
-                <li><strong>الاستعلام عن جميع الحزم (Query All Packages):</strong> يُستخدم حصرياً لعرض قائمة التطبيقات المثبتة على جهازك لتتمكن من اختيار التطبيقات التي تود حمايتها. لا نجمع أو نرسل قائمة تطبيقاتك لأي جهة.</li>
-                <li><strong>خدمة إمكانية الوصول (Accessibility):</strong> تُستخدم كطبقة حماية احتياطية لمراقبة التطبيقات المحمية فقط. لا تُستخدم لأي غرض آخر.</li>
-                <li><strong>التشغيل عند الإقلاع (Boot Completed):</strong> لإعادة تشغيل خدمة الحماية تلقائياً بعد إعادة تشغيل الجهاز.</li>
-                <li><strong>الخدمة الأمامية (Foreground Service):</strong> للحفاظ على استمرارية خدمة المراقبة في الخلفية.</li>
-                <li><strong>البصمة / المقاييس الحيوية (Biometrics):</strong> لتوفير خيار فتح القفل بالبصمة. تتم المعالجة بالكامل على جهازك.</li>
-                <li><strong>مسؤول الجهاز (Device Admin):</strong> لمنع إزالة التطبيق بدون رمز الحماية (ميزة اختيارية). عند تفعيل ميزة حماية الإزالة، سيطلب التطبيق إذن مسؤول الجهاز. يمكنك إلغاء هذا الإذن في أي وقت من الإعدادات، لكن ذلك سيعرض التطبيق لخطر إزالته من قبل المتطفلين.</li>
-            </ul>
+          <ul>
+            <li><strong>رمز القفل (PIN):</strong> يتم تخزينه محليًا بصيغة مشفرة.</li>
+            <li><strong>كود الاسترداد:</strong> يتم توليده عشوائيًا وتخزينه محليًا بشكل آمن.</li>
+            <li><strong>قائمة التطبيقات المحمية:</strong> تُستخدم فقط لتنفيذ وظيفة القفل.</li>
+            <li><strong>سجل الأحداث الأمنية:</strong> مثل محاولات الفتح الفاشلة، ويظل على الجهاز فقط.</li>
+            <li><strong>تفضيلات المستخدم:</strong> مثل اللغة وبعض الإعدادات الداخلية.</li>
+          </ul>
 
-            <h2>4. مشاركة البيانات</h2>
-            <p><strong>لا نشارك أي بيانات مع أطراف ثالثة.</strong> التطبيق لا يحتوي على:</p>
-            <ul>
-                <li>إعلانات أو شبكات إعلانية</li>
-                <li>أدوات تتبع أو تحليلات (Analytics)</li>
-                <li>اتصال بخوادم خارجية</li>
-                <li>خدمات سحابية لتخزين البيانات</li>
-            </ul>
+          <div class="highlight">
+            ✅ لا يتم بيع البيانات أو مشاركتها أو إرسالها عبر الإنترنت.
+          </div>
+        </article>
 
-            <h2>5. أمان البيانات</h2>
-            <p>نستخدم أعلى معايير الأمان لحماية بياناتك:</p>
-            <ul>
-                <li>تشفير AES-256-GCM عبر مكتبة AndroidX Security</li>
-                <li>مفاتيح التشفير مدعومة بالأجهزة (Hardware-backed) وتُدار عبر نظام Android Keystore، مما يضمن عدم إمكانية استخراجها أو اختراقها حتى من قبل التطبيقات الأخرى ذات صلاحيات الروت (Root).</li>
-                <li>حماية الكود المصدري عبر R8/ProGuard لمنع الهندسة العكسية</li>
-            </ul>
+        <article class="card">
+          <h2>3. استخدام الإنترنت</h2>
+          <p>
+            لا يعتمد التطبيق على الإنترنت لتشغيل وظيفته الأساسية، ولا يرسل
+            بيانات المستخدم إلى أي خوادم خارجية.
+          </p>
+          <div class="note">
+            قد تحتاج بعض الروابط الخارجية، مثل وسائل التواصل، إلى اتصال بالإنترنت عند فتحها يدويًا من قبل المستخدم.
+          </div>
+        </article>
 
-            <h2>6. حقوق المستخدم</h2>
-            <p>يمكنك في أي وقت:</p>
-            <ul>
-                <li>حذف جميع بياناتك بإلغاء تثبيت التطبيق</li>
-                <li>مراجعة سجل الأحداث الأمنية ومسحه من داخل التطبيق</li>
-                <li>إلغاء أي إذن من إعدادات هاتفك</li>
-            </ul>
+        <article class="card">
+          <h2>4. الأذونات المستخدمة</h2>
+          <p>يطلب التطبيق بعض الأذونات التي ترتبط مباشرة بوظيفة حماية التطبيقات:</p>
 
-            <h2>7. خصوصية الأطفال</h2>
-            <p>التطبيق غير موجه للأطفال دون سن 13 عاماً. لا نجمع بيانات من أي فئة عمرية عمداً.</p>
+          <ul>
+            <li>
+              <strong>إحصائيات الاستخدام (Usage Stats):</strong>
+              لاكتشاف التطبيق المفتوح حاليًا وتفعيل شاشة القفل عند الحاجة فقط.
+            </li>
+            <li>
+              <strong>الظهور فوق التطبيقات الأخرى (Display Over Other Apps):</strong>
+              لعرض واجهة القفل فوق التطبيقات المحمية ومنع الوصول إليها قبل التحقق.
+            </li>
+            <li>
+              <strong>الاستعلام عن جميع التطبيقات (Query All Packages):</strong>
+              لعرض التطبيقات المثبتة حتى يتمكن المستخدم من اختيار ما يريد حمايته.
+            </li>
+            <li>
+              <strong>خدمة إمكانية الوصول (Accessibility Service):</strong>
+              تُستخدم فقط كطبقة مساعدة أو احتياطية لدعم حماية التطبيقات المحمية،
+              ولا تُستخدم لقراءة المحتوى أو جمع بيانات شخصية أو تتبع نشاط المستخدم.
+            </li>
+            <li>
+              <strong>التشغيل عند الإقلاع (Boot Completed):</strong>
+              لإعادة تفعيل الحماية تلقائيًا بعد إعادة تشغيل الجهاز.
+            </li>
+            <li>
+              <strong>الخدمة الأمامية (Foreground Service):</strong>
+              للحفاظ على استمرارية خدمة الحماية أثناء التشغيل.
+            </li>
+            <li>
+              <strong>البصمة / المقاييس الحيوية:</strong>
+              لتوفير خيار فتح القفل بالبصمة، إن كان المستخدم قد فعّل هذه الميزة.
+            </li>
+            <li>
+              <strong>مسؤول الجهاز (Device Admin):</strong>
+              ميزة اختيارية تُستخدم لمنع إزالة التطبيق دون التحقق، ويمكن للمستخدم تعطيلها في أي وقت من إعدادات النظام.
+            </li>
+          </ul>
+        </article>
 
-            <h2>8. التواصل</h2>
-            <p>للاستفسارات المتعلقة بالخصوصية، تواصل معنا عبر:</p>
-            <ul>
-                <li>💬 واتساب: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
-                <li>💼 لينكد إن: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">م.عيسى الجماعي</a></li>
-            </ul>
+        <article class="card">
+          <h2>5. مشاركة البيانات</h2>
+          <p><strong>لا تتم مشاركة أي بيانات مع أي طرف ثالث.</strong></p>
+          <p>التطبيق لا يتضمن:</p>
+          <ul>
+            <li>إعلانات</li>
+            <li>أدوات تتبع</li>
+            <li>تحليلات خارجية</li>
+            <li>خدمات تخزين سحابي لبيانات القفل</li>
+          </ul>
+        </article>
 
-            <h2>9. التحديثات</h2>
-            <p>قد يتم تحديث هذه السياسة من وقت لآخر. سيتم نشر أي تغييرات على هذه الصفحة مع تحديث تاريخ "آخر تحديث".</p>
-        </div>
+        <article class="card">
+          <h2>6. أمان البيانات</h2>
+          <p>يعتمد التطبيق على وسائل حماية قوية لتأمين البيانات المحلية، ومنها:</p>
+          <ul>
+            <li>تشفير محلي باستخدام AES-256-GCM</li>
+            <li>إدارة المفاتيح عبر Android Keystore</li>
+            <li>الاستفادة من الحماية العتادية عندما تكون مدعومة على الجهاز</li>
+            <li>تقليل فرص الهندسة العكسية باستخدام R8 / ProGuard</li>
+          </ul>
+          <div class="highlight">
+            ✅ لا يتم حفظ مفاتيح التشفير في مكان خارجي عن بيئة Android الآمنة.
+          </div>
+        </article>
 
-        <!-- English Version -->
-        <div id="en-content">
-            <h1>🛡️ Privacy Policy — Haseen</h1>
-            <span class="date">Last Updated: April 19, 2026</span>
+        <article class="card">
+          <h2>7. حقوق المستخدم</h2>
+          <ul>
+            <li>يمكنك حذف بيانات التطبيق بإلغاء تثبيته من الجهاز.</li>
+            <li>يمكنك إلغاء أي إذن من إعدادات الهاتف في أي وقت.</li>
+            <li>يمكنك مراجعة ومسح السجل الأمني من داخل التطبيق إذا كانت الميزة متاحة.</li>
+          </ul>
+        </article>
 
-            <h2>1. Introduction</h2>
-            <p>Welcome to Haseen App Locker. We respect your privacy and are committed to protecting your personal data. This policy explains how our app handles your information.</p>
+        <article class="card">
+          <h2>8. خصوصية الأطفال</h2>
+          <p>
+            التطبيق غير موجه للأطفال دون سن 13 عامًا، ولا يتم تصميمه لجمع بيانات
+            من الأطفال أو استهدافهم.
+          </p>
+        </article>
 
-            <h2>2. Data We Collect</h2>
-            <p><strong>We do not collect any personal data.</strong> Haseen operates entirely offline on your device and does not send any data to external servers.</p>
-            <p>Data stored locally on your device only:</p>
-            <ul>
-                <li><strong>Passcode (PIN):</strong> Encrypted locally using AES-256 via AndroidX Security. Never transmitted externally.</li>
-                <li><strong>Recovery Code:</strong> Randomly generated and stored encrypted on your device only.</li>
-                <li><strong>Locked Apps List:</strong> Stored locally to enable the protection service.</li>
-                <li><strong>Security Event Log:</strong> Failed unlock attempts are logged locally for user review only.</li>
-                <li><strong>User Preferences:</strong> Language and stealth mode settings, stored locally.</li>
-            </ul>
+        <article class="card">
+          <h2>9. الامتثال</h2>
+          <p>
+            تم إعداد هذه السياسة بهدف دعم الامتثال لمتطلبات
+            <strong>Google Play</strong> وأفضل ممارسات أمان Android.
+          </p>
+        </article>
 
-            <h2>3. Permissions Used</h2>
-            <p>The app requests the following permissions solely to perform its core function:</p>
-            <ul>
-                <li><strong>Usage Stats:</strong> To detect which app is currently in the foreground and activate the lock screen. No usage data is recorded or transmitted.</li>
-                <li><strong>Display Over Other Apps (System Alert Window):</strong> A <u>critical permission</u> that allows the app to draw the lock screen overlay securely on top of protected apps, preventing access until the correct PIN is entered.</li>
-                <li><strong>Query All Packages:</strong> Used exclusively to display a list of installed applications on your device so you can select which ones to protect. We do not collect or transmit your app list.</li>
-                <li><strong>Accessibility Service:</strong> Used as a backup protection layer to monitor protected apps only. Not used for any other purpose.</li>
-                <li><strong>Boot Completed:</strong> To automatically restart the protection service after device reboot.</li>
-                <li><strong>Foreground Service:</strong> To maintain the monitoring service running in the background.</li>
-                <li><strong>Biometrics:</strong> To provide fingerprint unlock. All processing is done locally on your device.</li>
-                <li><strong>Device Admin:</strong> To prevent app removal without the security code (optional feature). When uninstall protection is enabled, the app will request Device Admin permission. You can revoke this permission at any time from your settings, but doing so will expose the app to being uninstalled by intruders.</li>
-            </ul>
+        <article class="card">
+          <h2>10. التواصل</h2>
+          <ul class="contact-list">
+            <li>📧 البريد الإلكتروني: <a href="mailto:your@email.com">your@email.com</a></li>
+            <li>💬 واتساب: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
+            <li>💼 لينكد إن: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">م. عيسى الجماعي</a></li>
+          </ul>
+        </article>
 
-            <h2>4. Data Sharing</h2>
-            <p><strong>We do not share any data with third parties.</strong> The app contains no:</p>
-            <ul>
-                <li>Advertisements or ad networks</li>
-                <li>Tracking tools or analytics</li>
-                <li>External server connections</li>
-                <li>Cloud storage services</li>
-            </ul>
+        <article class="card">
+          <h2>11. التحديثات</h2>
+          <p>
+            قد نقوم بتحديث سياسة الخصوصية من وقت لآخر. عند إجراء أي تعديل، سيتم
+            نشر النسخة الجديدة في هذه الصفحة مع تحديث تاريخ آخر تعديل.
+          </p>
+        </article>
+      </div>
+    </section>
 
-            <h2>5. Data Security</h2>
-            <p>We use the highest security standards to protect your data:</p>
-            <ul>
-                <li>AES-256-GCM encryption via AndroidX Security</li>
-                <li>Encryption keys are hardware-backed via the Android Keystore System, ensuring they cannot be extracted or compromised even by other apps with root access.</li>
-                <li>Source code protection via R8/ProGuard to prevent reverse engineering</li>
-            </ul>
+    <!-- English -->
+    <section id="contentEn" class="hidden">
+      <div class="hero">
+        <h1>Privacy Policy — Haseen App Locker</h1>
+        <p>
+          We are committed to protecting your privacy and clearly explaining how
+          the app handles data in a secure and transparent way.
+        </p>
+        <div class="updated">📅 Last Updated: April 19, 2026</div>
+      </div>
 
-            <h2>6. User Rights</h2>
-            <p>You can at any time:</p>
-            <ul>
-                <li>Delete all your data by uninstalling the app</li>
-                <li>Review and clear the security event log from within the app</li>
-                <li>Revoke any permission from your phone's settings</li>
-            </ul>
+      <div class="content">
+        <article class="card">
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to <strong>Haseen</strong>, an app locker designed to help
+            protect access to selected applications on your device.
+          </p>
+          <p>
+            This Privacy Policy explains how the app handles information related
+            to its functionality and your use of the service.
+          </p>
+        </article>
 
-            <h2>7. Children's Privacy</h2>
-            <p>The app is not directed at children under 13. We do not knowingly collect data from any age group.</p>
+        <article class="card">
+          <h2>2. Data Handling</h2>
+          <p>
+            <strong>Haseen does not collect or transmit personal data to external servers.</strong>
+          </p>
+          <p>
+            All data related to the app’s core functionality is processed and stored locally on your device only.
+          </p>
 
-            <h2>8. Contact</h2>
-            <p>For privacy-related inquiries, contact us via:</p>
-            <ul>
-                <li>💬 WhatsApp: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
-                <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">Eng. Eissa Al-Gumaei</a></li>
-            </ul>
+          <ul>
+            <li><strong>PIN Code:</strong> Stored locally in encrypted form.</li>
+            <li><strong>Recovery Code:</strong> Randomly generated and securely stored on the device.</li>
+            <li><strong>Protected Apps List:</strong> Used only to provide app-lock functionality.</li>
+            <li><strong>Security Event Log:</strong> Such as failed unlock attempts, stored locally only.</li>
+            <li><strong>User Preferences:</strong> Such as language and certain internal settings.</li>
+          </ul>
 
-            <h2>9. Changes</h2>
-            <p>This policy may be updated from time to time. Any changes will be posted on this page with an updated "Last Updated" date.</p>
-        </div>
+          <div class="highlight">
+            ✅ No user data is sold, shared, or transmitted over the internet.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>3. Internet Usage</h2>
+          <p>
+            The app does not rely on internet access for its core functionality
+            and does not send user data to external servers.
+          </p>
+          <div class="note">
+            External links, such as contact links, may require internet access only when opened manually by the user.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>4. Permissions Used</h2>
+          <p>The app may request certain permissions directly related to app protection:</p>
+
+          <ul>
+            <li>
+              <strong>Usage Stats:</strong>
+              Used to detect which app is currently in the foreground so the lock screen can be triggered when needed.
+            </li>
+            <li>
+              <strong>Display Over Other Apps:</strong>
+              Required to securely display the lock interface over protected applications.
+            </li>
+            <li>
+              <strong>Query All Packages:</strong>
+              Used only to display installed apps so the user can choose which apps to protect.
+            </li>
+            <li>
+              <strong>Accessibility Service:</strong>
+              Used only as a support or backup protection layer for protected apps. It is not used to read user content, collect personal data, or track user activity.
+            </li>
+            <li>
+              <strong>Boot Completed:</strong>
+              Used to restart protection after device reboot.
+            </li>
+            <li>
+              <strong>Foreground Service:</strong>
+              Used to keep the protection service running.
+            </li>
+            <li>
+              <strong>Biometric Authentication:</strong>
+              Used to provide fingerprint-based unlock if enabled by the user.
+            </li>
+            <li>
+              <strong>Device Admin:</strong>
+              An optional feature used to help prevent app removal without verification. It can be disabled at any time from system settings.
+            </li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>5. Data Sharing</h2>
+          <p><strong>No data is shared with third parties.</strong></p>
+          <p>The app does not include:</p>
+          <ul>
+            <li>Advertisements</li>
+            <li>Tracking tools</li>
+            <li>External analytics</li>
+            <li>Cloud storage for lock-related data</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>6. Data Security</h2>
+          <p>The app uses strong local security measures, including:</p>
+          <ul>
+            <li>Local AES-256-GCM encryption</li>
+            <li>Key management through Android Keystore</li>
+            <li>Hardware-backed protection where supported</li>
+            <li>Code hardening using R8 / ProGuard</li>
+          </ul>
+          <div class="highlight">
+            ✅ Encryption keys are not stored outside Android’s secure environment.
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>7. User Rights</h2>
+          <ul>
+            <li>You can delete app data by uninstalling the app.</li>
+            <li>You can revoke permissions at any time from device settings.</li>
+            <li>You may review or clear the security log from داخل التطبيق if that feature is available.</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>8. Children’s Privacy</h2>
+          <p>
+            The app is not directed to children under the age of 13 and is not
+            designed to collect data from children.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>9. Compliance</h2>
+          <p>
+            This policy is written to support compliance with
+            <strong>Google Play</strong> requirements and Android security best practices.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>10. Contact</h2>
+          <ul class="contact-list">
+            <li>📧 Email: <a href="mailto:your@email.com">your@email.com</a></li>
+            <li>💬 WhatsApp: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
+            <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">Eng. Eissa Al-Gumaei</a></li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h2>11. Changes to This Policy</h2>
+          <p>
+            This Privacy Policy may be updated from time to time. Any updates
+            will be posted on this page along with the revised last updated date.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <div class="footer">
+      <p>© 2026 Haseen App Locker. All rights reserved.</p>
     </div>
+  </main>
 
-    <!-- Language Switch Logic -->
-    <script>
-        function switchLang(lang) {
-            const html = document.getElementById('html-root');
-            const arBtn = document.getElementById('btn-ar');
-            const enBtn = document.getElementById('btn-en');
-            const arContent = document.getElementById('ar-content');
-            const enContent = document.getElementById('en-content');
+  <script>
+    const htmlRoot = document.getElementById("htmlRoot");
+    const btnAr = document.getElementById("btnAr");
+    const btnEn = document.getElementById("btnEn");
+    const contentAr = document.getElementById("contentAr");
+    const contentEn = document.getElementById("contentEn");
+    const brandText = document.getElementById("brandText");
 
-            if (lang === 'en') {
-                html.dir = 'ltr';
-                arContent.style.display = 'none';
-                enContent.style.display = 'block';
-                enBtn.classList.add('active');
-                arBtn.classList.remove('active');
-            } else {
-                html.dir = 'rtl';
-                enContent.style.display = 'none';
-                arContent.style.display = 'block';
-                arBtn.classList.add('active');
-                enBtn.classList.remove('active');
-            }
-        }
-    </script>
+    function setLanguage(lang) {
+      const isArabic = lang === "ar";
+
+      htmlRoot.lang = isArabic ? "ar" : "en";
+      htmlRoot.dir = isArabic ? "rtl" : "ltr";
+      document.title = isArabic
+        ? "سياسة الخصوصية - حصين | Haseen Privacy Policy"
+        : "Haseen Privacy Policy | سياسة الخصوصية - حصين";
+
+      contentAr.classList.toggle("hidden", !isArabic);
+      contentEn.classList.toggle("hidden", isArabic);
+
+      btnAr.classList.toggle("active", isArabic);
+      btnEn.classList.toggle("active", !isArabic);
+
+      brandText.textContent = isArabic
+        ? "حصين - سياسة الخصوصية"
+        : "Haseen - Privacy Policy";
+
+      localStorage.setItem("haseen_policy_lang", lang);
+    }
+
+    btnAr.addEventListener("click", () => setLanguage("ar"));
+    btnEn.addEventListener("click", () => setLanguage("en"));
+
+    const savedLang = localStorage.getItem("haseen_policy_lang");
+    setLanguage(savedLang === "en" ? "en" : "ar");
+  </script>
 </body>
 </html>
