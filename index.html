@@ -88,7 +88,7 @@
         <!-- Arabic Version -->
         <div id="ar">
             <h1>🛡️ سياسة الخصوصية — حصين (Haseen)</h1>
-            <p class="date">آخر تحديث: 9 أبريل 2026</p>
+            <p class="date">آخر تحديث: 19 أبريل 2026</p>
 
             <h2>1. مقدمة</h2>
             <p>مرحباً بك في تطبيق "حصين" (Haseen) لحماية التطبيقات. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية.
@@ -113,6 +113,8 @@
             <ul>
                 <li><strong>إحصائيات الاستخدام (Usage Stats):</strong> لمعرفة التطبيق المفتوح حالياً وتفعيل شاشة القفل
                     عند الحاجة. لا يتم تسجيل أو إرسال أي بيانات استخدام.</li>
+                <li><strong>الظهور فوق التطبيقات الأخرى (System Alert Window / Display over other apps):</strong> إذن <u>أساسي جداً</u> يمكّن التطبيق من رسم واجهة القفل والتأمين فوق التطبيقات الأخرى لمنع الوصول إليها حتى يتم إدخال الرمز الصحيح.</li>
+                <li><strong>الاستعلام عن جميع الحزم (Query All Packages):</strong> يُستخدم حصرياً لعرض قائمة التطبيقات المثبتة على جهازك لتتمكن من اختيار التطبيقات التي تود حمايتها. لا نجمع أو نرسل قائمة تطبيقاتك لأي جهة.</li>
                 <li><strong>خدمة إمكانية الوصول (Accessibility):</strong> تُستخدم كطبقة حماية احتياطية لمراقبة التطبيقات
                     المحمية فقط. لا تُستخدم لأي غرض آخر.</li>
                 <li><strong>التشغيل عند الإقلاع (Boot Completed):</strong> لإعادة تشغيل خدمة الحماية تلقائياً بعد إعادة
@@ -121,8 +123,7 @@
                     الخلفية.</li>
                 <li><strong>البصمة / المقاييس الحيوية (Biometrics):</strong> لتوفير خيار فتح القفل بالبصمة. تتم المعالجة
                     بالكامل على جهازك.</li>
-                <li><strong>مسؤول الجهاز (Device Admin):</strong> لمنع إزالة التطبيق بدون رمز الحماية (ميزة اختيارية).
-                </li>
+                <li><strong>مسؤول الجهاز (Device Admin):</strong> لمنع إزالة التطبيق بدون رمز الحماية (ميزة اختيارية). عند تفعيل ميزة حماية الإزالة، سيطلب التطبيق إذن مسؤول الجهاز. يمكنك إلغاء هذا الإذن في أي وقت من الإعدادات، لكن ذلك سيعرض التطبيق لخطر إزالته من قبل المتطفلين.</li>
             </ul>
 
             <h2>4. مشاركة البيانات</h2>
@@ -138,7 +139,7 @@
             <p>نستخدم أعلى معايير الأمان لحماية بياناتك:</p>
             <ul>
                 <li>تشفير AES-256-GCM عبر مكتبة AndroidX Security (EncryptedSharedPreferences)</li>
-                <li>مفاتيح التشفير تُدار عبر Android Keystore ولا يمكن استخراجها</li>
+                <li>مفاتيح التشفير مدعومة بالأجهزة (Hardware-backed) وتُدار عبر نظام Android Keystore، مما يضمن عدم إمكانية استخراجها أو اختراقها حتى من قبل التطبيقات الأخرى ذات صلاحيات الروت (Root).</li>
                 <li>حماية الكود المصدري عبر R8/ProGuard لمنع الهندسة العكسية</li>
             </ul>
 
@@ -156,8 +157,8 @@
             <h2>8. التواصل</h2>
             <p>للاستفسارات المتعلقة بالخصوصية، تواصل معنا عبر:</p>
             <ul>
-                <li>واتساب: <a href="https://wa.me/967775346074">+967 775 346 074</a></li>
-                <li>لينكد إن: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a">م.عيسى الجماعي</a></li>
+                <li>💬 واتساب: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
+                <li>💼 لينكد إن: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">م.عيسى الجماعي</a></li>
             </ul>
 
             <h2>9. التحديثات</h2>
@@ -169,7 +170,7 @@
         <!-- English Version -->
         <div id="en" dir="ltr" style="text-align: left;">
             <h1>🛡️ Privacy Policy — Haseen (حصين)</h1>
-            <p class="date">Last Updated: April 9, 2026</p>
+            <p class="date">Last Updated: April 19, 2026</p>
 
             <h2>1. Introduction</h2>
             <p>Welcome to Haseen App Locker. We respect your privacy and are committed to protecting your personal data.
@@ -194,6 +195,8 @@
             <ul>
                 <li><strong>Usage Stats:</strong> To detect which app is currently in the foreground and activate the
                     lock screen. No usage data is recorded or transmitted.</li>
+                <li><strong>Display Over Other Apps (System Alert Window):</strong> A <u>critical permission</u> that allows the app to draw the lock screen overlay securely on top of protected apps, preventing access until the correct PIN is entered.</li>
+                <li><strong>Query All Packages:</strong> Used exclusively to display a list of installed applications on your device so you can select which ones to protect. We do not collect or transmit your app list.</li>
                 <li><strong>Accessibility Service:</strong> Used as a backup protection layer to monitor protected apps
                     only. Not used for any other purpose.</li>
                 <li><strong>Boot Completed:</strong> To automatically restart the protection service after device
@@ -202,8 +205,7 @@
                 </li>
                 <li><strong>Biometrics:</strong> To provide fingerprint unlock. All processing is done locally on your
                     device.</li>
-                <li><strong>Device Admin:</strong> To prevent app removal without the security code (optional feature).
-                </li>
+                <li><strong>Device Admin:</strong> To prevent app removal without the security code (optional feature). When uninstall protection is enabled, the app will request Device Admin permission. You can revoke this permission at any time from your settings, but doing so will expose the app to being uninstalled by intruders.</li>
             </ul>
 
             <h2>4. Data Sharing</h2>
@@ -219,7 +221,7 @@
             <p>We use the highest security standards to protect your data:</p>
             <ul>
                 <li>AES-256-GCM encryption via AndroidX Security (EncryptedSharedPreferences)</li>
-                <li>Encryption keys managed by Android Keystore and cannot be extracted</li>
+                <li>Encryption keys are hardware-backed via the Android Keystore System, ensuring they cannot be extracted or compromised even by other apps with root access.</li>
                 <li>Source code protection via R8/ProGuard to prevent reverse engineering</li>
             </ul>
 
@@ -237,8 +239,8 @@
             <h2>8. Contact</h2>
             <p>For privacy-related inquiries, contact us via:</p>
             <ul>
-                <li>WhatsApp: <a href="https://wa.me/967775346074">+967 775 346 074</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a">Eng. Eissa Al-Gumaei</a>
+                <li>💬 WhatsApp: <a href="https://wa.me/967775346074" target="_blank" rel="noopener noreferrer">+967 775 346 074</a></li>
+                <li>💼 LinkedIn: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a" target="_blank" rel="noopener noreferrer">Eng. Eissa Al-Gumaei</a>
                 </li>
             </ul>
 
