@@ -1,5 +1,506 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>سياسة الخصوصية - حصين | Privacy Policy - Haseen</title>
+  <style>
+    :root {
+      --bg: #0f0f1a;
+      --panel: #171727;
+      --text: #e8e8ee;
+      --muted: #9aa0b4;
+      --primary: #7c4dff;
+      --primary-2: #9b7bff;
+      --border: #2a2a3f;
+      --ok: #13b26b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      padding: 16px;
+    }
+
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+    }
+
+    .sticky-top {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 15, 26, 0.92);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 10px;
+      margin-bottom: 12px;
+    }
+
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .title {
+      font-size: 1rem;
+      color: var(--primary-2);
+      font-weight: 700;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #1f1f33;
+      color: var(--text);
+      padding: 9px 12px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    button.primary {
+      background: var(--primary);
+      border-color: transparent;
+      color: #fff;
+      font-weight: 700;
+    }
+
+    button:active { transform: translateY(1px); }
+
+    .toc {
+      margin-top: 10px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .toc a {
+      display: block;
+      text-decoration: none;
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+      background: #1b1b2b;
+      font-size: 0.88rem;
+    }
+
+    .lang-block {
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: var(--panel);
+      padding: 14px;
+    }
+
+    .lang-block[hidden] { display: none !important; }
+
+    h1 {
+      color: var(--primary-2);
+      font-size: 1.4rem;
+      margin-bottom: 6px;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.88rem;
+      margin-bottom: 16px;
+    }
+
+    .section {
+      border-top: 1px solid var(--border);
+      padding-top: 14px;
+      margin-top: 12px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    h2 {
+      color: #c9b8ff;
+      font-size: 1.05rem;
+    }
+
+    p, li { color: #d7d7e3; }
+    ul { padding-inline-start: 18px; }
+    li { margin-bottom: 8px; }
+    a { color: #b89cff; }
+
+    .small-btn {
+      font-size: 0.78rem;
+      padding: 6px 9px;
+      border-radius: 8px;
+      background: #23233a;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 18px;
+      transform: translateX(-50%);
+      background: #111827;
+      color: #fff;
+      border: 1px solid #374151;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .toast.show {
+      opacity: 1;
+    }
+
+    .toast.ok {
+      border-color: #0f5132;
+      background: #052e1a;
+      color: #d1fae5;
+    }
+
+    @media (max-width: 640px) {
+      body { padding: 10px; }
+      .toc { grid-template-columns: 1fr; }
+      h1 { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sticky-top">
+      <div class="top-row">
+        <div class="title" id="topTitle">🛡️ سياسة الخصوصية - حصين</div>
+        <div class="controls">
+          <button id="langArBtn" class="primary" type="button">العربية</button>
+          <button id="langEnBtn" type="button">English</button>
+          <button id="copyAllBtn" type="button">نسخ السياسة كاملة</button>
+        </div>
+      </div>
+      <nav class="toc" id="toc"></nav>
+    </div>
+
+    <section id="arPolicy" class="lang-block">
+      <h1>🛡️ سياسة الخصوصية — حصين (Haseen)</h1>
+      <p class="date">آخر تحديث: 9 أبريل 2026</p>
+
+      <article class="section" id="ar-s1">
+        <div class="section-header">
+          <h2>1. مقدمة</h2>
+          <button class="small-btn copy-section" data-target="ar-s1" type="button">نسخ القسم</button>
+        </div>
+        <p>مرحباً بك في تطبيق "حصين" (Haseen) لحماية التطبيقات. نحن نحترم خصوصيتك ونلتزم بحماية بياناتك الشخصية. توضح هذه السياسة كيفية تعامل التطبيق مع بياناتك.</p>
+      </article>
+
+      <article class="section" id="ar-s2">
+        <div class="section-header">
+          <h2>2. البيانات التي نجمعها</h2>
+          <button class="small-btn copy-section" data-target="ar-s2" type="button">نسخ القسم</button>
+        </div>
+        <p><strong>لا نجمع أي بيانات شخصية.</strong> تطبيق حصين يعمل بالكامل على جهازك المحلي (Offline) ولا يرسل أي بيانات إلى خوادم خارجية.</p>
+        <p>البيانات المخزنة محلياً على جهازك فقط:</p>
+        <ul>
+          <li><strong>رمز المرور (PIN):</strong> يتم تشفيره وتخزينه محلياً باستخدام تقنية AES-256 عبر مكتبة AndroidX Security.</li>
+          <li><strong>كود الاسترداد:</strong> يتم توليده عشوائياً وتخزينه مشفراً على جهازك فقط.</li>
+          <li><strong>قائمة التطبيقات المقفلة:</strong> تُحفظ محلياً لتمكين خدمة الحماية.</li>
+          <li><strong>سجل الأحداث الأمنية:</strong> محاولات الدخول الفاشلة تُسجل محلياً فقط.</li>
+          <li><strong>تفضيلات المستخدم:</strong> مثل اللغة ووضع التخفي، تُحفظ محلياً.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="ar-s3">
+        <div class="section-header">
+          <h2>3. الأذونات المستخدمة</h2>
+          <button class="small-btn copy-section" data-target="ar-s3" type="button">نسخ القسم</button>
+        </div>
+        <ul>
+          <li><strong>إحصائيات الاستخدام:</strong> لمعرفة التطبيق المفتوح حالياً وتفعيل شاشة القفل.</li>
+          <li><strong>إمكانية الوصول:</strong> كطبقة حماية احتياطية لمراقبة التطبيقات المحمية فقط.</li>
+          <li><strong>التشغيل عند الإقلاع:</strong> لإعادة تشغيل خدمة الحماية تلقائياً.</li>
+          <li><strong>الخدمة الأمامية:</strong> للحفاظ على عمل المراقبة في الخلفية.</li>
+          <li><strong>البصمة/المقاييس الحيوية:</strong> لتوفير خيار فتح القفل بالبصمة.</li>
+          <li><strong>مسؤول الجهاز:</strong> ميزة اختيارية لمنع إزالة التطبيق بدون رمز الحماية.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="ar-s4">
+        <div class="section-header">
+          <h2>4. مشاركة البيانات</h2>
+          <button class="small-btn copy-section" data-target="ar-s4" type="button">نسخ القسم</button>
+        </div>
+        <p><strong>لا نشارك أي بيانات مع أطراف ثالثة.</strong></p>
+      </article>
+
+      <article class="section" id="ar-s5">
+        <div class="section-header">
+          <h2>5. أمان البيانات</h2>
+          <button class="small-btn copy-section" data-target="ar-s5" type="button">نسخ القسم</button>
+        </div>
+        <ul>
+          <li>تشفير AES-256-GCM عبر AndroidX Security.</li>
+          <li>المفاتيح تُدار عبر Android Keystore.</li>
+          <li>حماية الكود عبر R8/ProGuard.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="ar-s6">
+        <div class="section-header">
+          <h2>6. حقوق المستخدم</h2>
+          <button class="small-btn copy-section" data-target="ar-s6" type="button">نسخ القسم</button>
+        </div>
+        <ul>
+          <li>حذف البيانات بإزالة التطبيق.</li>
+          <li>مراجعة ومسح سجل الأحداث الأمنية من داخل التطبيق.</li>
+          <li>إلغاء أي إذن من إعدادات الهاتف.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="ar-s7">
+        <div class="section-header">
+          <h2>7. خصوصية الأطفال</h2>
+          <button class="small-btn copy-section" data-target="ar-s7" type="button">نسخ القسم</button>
+        </div>
+        <p>التطبيق غير موجه للأطفال دون سن 13 عاماً.</p>
+      </article>
+
+      <article class="section" id="ar-s8">
+        <div class="section-header">
+          <h2>8. التواصل</h2>
+          <button class="small-btn copy-section" data-target="ar-s8" type="button">نسخ القسم</button>
+        </div>
+        <ul>
+          <li>واتساب: <a href="https://wa.me/967775346074">+967 775 346 074</a></li>
+          <li>لينكد إن: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a">م.عيسى الجماعي</a></li>
+        </ul>
+      </article>
+
+      <article class="section" id="ar-s9">
+        <div class="section-header">
+          <h2>9. التحديثات</h2>
+          <button class="small-btn copy-section" data-target="ar-s9" type="button">نسخ القسم</button>
+        </div>
+        <p>قد يتم تحديث هذه السياسة من وقت لآخر مع تحديث تاريخ "آخر تحديث".</p>
+      </article>
+    </section>
+
+    <section id="enPolicy" class="lang-block" dir="ltr" style="text-align:left" hidden>
+      <h1>🛡️ Privacy Policy — Haseen (حصين)</h1>
+      <p class="date">Last Updated: April 9, 2026</p>
+
+      <article class="section" id="en-s1">
+        <div class="section-header">
+          <h2>1. Introduction</h2>
+          <button class="small-btn copy-section" data-target="en-s1" type="button">Copy Section</button>
+        </div>
+        <p>Welcome to Haseen App Locker. We respect your privacy and explain clearly how data is handled.</p>
+      </article>
+
+      <article class="section" id="en-s2">
+        <div class="section-header">
+          <h2>2. Data We Collect</h2>
+          <button class="small-btn copy-section" data-target="en-s2" type="button">Copy Section</button>
+        </div>
+        <p><strong>We do not collect personal data.</strong> Haseen works offline and stores data locally only.</p>
+        <ul>
+          <li><strong>PIN:</strong> encrypted locally via AndroidX Security.</li>
+          <li><strong>Recovery code:</strong> generated/stored locally.</li>
+          <li><strong>Locked apps list:</strong> local storage only.</li>
+          <li><strong>Security logs:</strong> local failed-attempt records only.</li>
+          <li><strong>User preferences:</strong> language and stealth mode.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="en-s3">
+        <div class="section-header">
+          <h2>3. Permissions Used</h2>
+          <button class="small-btn copy-section" data-target="en-s3" type="button">Copy Section</button>
+        </div>
+        <ul>
+          <li><strong>Usage Stats:</strong> detect foreground app for lock triggering.</li>
+          <li><strong>Accessibility:</strong> backup protection layer for protected apps only.</li>
+          <li><strong>Boot Completed:</strong> restart protection after reboot.</li>
+          <li><strong>Foreground Service:</strong> keep monitoring active.</li>
+          <li><strong>Biometrics:</strong> local fingerprint unlock option.</li>
+          <li><strong>Device Admin:</strong> optional uninstall protection.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="en-s4">
+        <div class="section-header">
+          <h2>4. Data Sharing</h2>
+          <button class="small-btn copy-section" data-target="en-s4" type="button">Copy Section</button>
+        </div>
+        <p><strong>No data is shared with third parties.</strong></p>
+      </article>
+
+      <article class="section" id="en-s5">
+        <div class="section-header">
+          <h2>5. Data Security</h2>
+          <button class="small-btn copy-section" data-target="en-s5" type="button">Copy Section</button>
+        </div>
+        <ul>
+          <li>AES-256-GCM encryption through AndroidX Security.</li>
+          <li>Keys managed by Android Keystore.</li>
+          <li>R8/ProGuard code protection.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="en-s6">
+        <div class="section-header">
+          <h2>6. User Rights</h2>
+          <button class="small-btn copy-section" data-target="en-s6" type="button">Copy Section</button>
+        </div>
+        <ul>
+          <li>Delete all data by uninstalling the app.</li>
+          <li>Review and clear security logs from inside the app.</li>
+          <li>Revoke permissions from device settings.</li>
+        </ul>
+      </article>
+
+      <article class="section" id="en-s7">
+        <div class="section-header">
+          <h2>7. Children's Privacy</h2>
+          <button class="small-btn copy-section" data-target="en-s7" type="button">Copy Section</button>
+        </div>
+        <p>The app is not directed to children under 13.</p>
+      </article>
+
+      <article class="section" id="en-s8">
+        <div class="section-header">
+          <h2>8. Contact</h2>
+          <button class="small-btn copy-section" data-target="en-s8" type="button">Copy Section</button>
+        </div>
+        <ul>
+          <li>WhatsApp: <a href="https://wa.me/967775346074">+967 775 346 074</a></li>
+          <li>LinkedIn: <a href="https://www.linkedin.com/in/eissa-al-gumaei-64896224a">Eng. Eissa Al-Gumaei</a></li>
+        </ul>
+      </article>
+
+      <article class="section" id="en-s9">
+        <div class="section-header">
+          <h2>9. Changes</h2>
+          <button class="small-btn copy-section" data-target="en-s9" type="button">Copy Section</button>
+        </div>
+        <p>This policy may be updated from time to time with an updated "Last Updated" date.</p>
+      </article>
+    </section>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>
+    const arPolicy = document.getElementById("arPolicy");
+    const enPolicy = document.getElementById("enPolicy");
+    const arBtn = document.getElementById("langArBtn");
+    const enBtn = document.getElementById("langEnBtn");
+    const topTitle = document.getElementById("topTitle");
+    const toc = document.getElementById("toc");
+    const copyAllBtn = document.getElementById("copyAllBtn");
+    const toast = document.getElementById("toast");
+
+    let currentLang = "ar";
+
+    function notify(msg, ok = true) {
+      toast.textContent = msg;
+      toast.className = "toast show" + (ok ? " ok" : "");
+      setTimeout(() => { toast.className = "toast"; }, 1400);
+    }
+
+    async function copyText(text) {
+      try {
+        await navigator.clipboard.writeText(text);
+        return true;
+      } catch (_) {
+        return false;
+      }
+    }
+
+    function getCurrentPolicy() {
+      return currentLang === "ar" ? arPolicy : enPolicy;
+    }
+
+    function setLang(lang) {
+      currentLang = lang;
+      const isAr = lang === "ar";
+
+      document.documentElement.lang = isAr ? "ar" : "en";
+      document.documentElement.dir = isAr ? "rtl" : "ltr";
+
+      arPolicy.hidden = !isAr;
+      enPolicy.hidden = isAr;
+
+      arBtn.classList.toggle("primary", isAr);
+      enBtn.classList.toggle("primary", !isAr);
+
+      topTitle.textContent = isAr
+        ? "🛡️ سياسة الخصوصية - حصين"
+        : "🛡️ Privacy Policy - Haseen";
+
+      copyAllBtn.textContent = isAr ? "نسخ السياسة كاملة" : "Copy Full Policy";
+      buildToc();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function buildToc() {
+      toc.innerHTML = "";
+      const sections = getCurrentPolicy().querySelectorAll(".section h2");
+      sections.forEach((h2) => {
+        const link = document.createElement("a");
+        const section = h2.closest(".section");
+        link.href = "#" + section.id;
+        link.textContent = h2.textContent;
+        toc.appendChild(link);
+      });
+    }
+
+    arBtn.addEventListener("click", () => setLang("ar"));
+    enBtn.addEventListener("click", () => setLang("en"));
+
+    copyAllBtn.addEventListener("click", async () => {
+      const ok = await copyText(getCurrentPolicy().innerText.trim());
+      notify(currentLang === "ar"
+        ? (ok ? "تم نسخ السياسة" : "فشل النسخ")
+        : (ok ? "Policy copied" : "Copy failed"), ok);
+    });
+
+    document.addEventListener("click", async (e) => {
+      const btn = e.target.closest(".copy-section");
+      if (!btn) return;
+      const id = btn.getAttribute("data-target");
+      const el = document.getElementById(id);
+      if (!el) return;
+      const ok = await copyText(el.innerText.trim());
+      notify(currentLang === "ar"
+        ? (ok ? "تم نسخ القسم" : "فشل النسخ")
+        : (ok ? "Section copied" : "Copy failed"), ok);
+    });
+
+    setLang("ar");
+  </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
 
 <head>
     <meta charset="UTF-8">
